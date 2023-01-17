@@ -1,0 +1,171 @@
+/********** MEDIA QUERIES ***********/
+/********** MEDIA QUERIES ***********/
+/********** MEDIA QUERIES ***********/
+
+/* TABLET */
+@media screen and (max-width: 769px) {
+    /* HEADER SECTION */
+    nav{
+        .btn{
+            display: none;
+        }
+        
+    }
+
+    /* INTRO SECTION */
+    .intro-content {
+        padding: 4rem 2.5rem;
+    }
+
+    .intro-text{
+        h1{
+            font-size: 4rem;
+        }
+    }
+
+    /* ABOUT SECTION */
+    .about {
+        flex-direction: column-reverse;
+    }
+
+    .about-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* PRICING SECTION */
+    .price {
+        width: 80%;
+        flex-direction: column;
+    }
+
+    .price-box:nth-child(even) {
+        transform: scale(1);
+        z-index: 999;
+    }
+}
+
+
+
+
+
+/* MOBILE QUERIES */
+@media screen and (max-width: 600px) {
+    /* HEADER SECTION */
+    .hamburger {
+        display: inline-block;
+    }
+
+    .hamburger{
+        i{
+            font-size: 3rem;
+            color: $color-primary;
+            transition: all .3s;
+        }
+    }
+
+    .nav-ul {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 60%;
+        height: 100%;
+        display: block;
+        background-color: rgba(0,0,0,.8);
+        padding-top: 2rem;
+        transform: translateX(-150%);
+        z-index: 11;
+        transition: all .5s;
+    }
+
+    .nav-ul{
+        li{
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid $white;
+            padding-bottom: 1rem;
+        }
+    }
+
+    .nav-ul{
+       li{
+         a{
+            color: $white;
+            padding: 1rem 2.5rem;
+            transition: all .3s;
+         }
+       }
+    }
+
+    .nav-ul li a:hover,
+    .nav-ul .current a {
+        margin-left: 1rem;
+        background-color: transparent;
+        color: $color-primary;
+    }
+
+    .nav-ul li a::before {
+        display: none;
+    }
+
+    .nav-ul li a::after {
+        display: none;
+    }
+
+    /* SLIDE MENU WHEN THE HAMBURGER IS CLICKED */
+    #toggle:checked ~ .nav-ul {
+        transform: translateX(0);
+    }
+
+    #toggle:checked ~ .hamburger i {
+        border: 1px solid $dark;
+        padding: 2px 5px;
+        border-radius: 3px;
+    }
+
+    /* .check {
+        display: inline-block;
+    } */
+
+    /* INTRO SECTION */
+    .intro-content {
+        padding: 7rem 2.5rem;
+    }
+
+    .intro-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .intro-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .first-span {
+        font-size: 2rem;
+    }
+
+    .intro-text{
+        p{
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        
+    }
+
+    /* pricing section */
+    .price {
+        width: 100%;
+        padding: 0;
+        align-items: center;
+    }
+
+    /* TESTIMONIAL SECTION */
+    .testimonial {
+        flex-direction: column;
+    }
+
+    .cta {
+        width: 80%;
+    }
+
+}

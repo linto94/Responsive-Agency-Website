@@ -1,0 +1,251 @@
+/* INTRO SECTION */
+/* INTRO SECTION */
+/* INTRO SECTION */
+.intro-section {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    margin: 0 auto;
+    text-align: left;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 70vh, 0% 100%);
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-color: rgba(0,0,0,.7);
+}
+
+.intro-content {
+    padding: 10rem 2.5rem;
+    z-index: 1;
+}
+
+.intro-text {
+    width: 65%;
+}
+
+.intro-text {
+   h1{
+    display: block;
+    font-size: 5rem;
+    font-weight: 700;
+    color: $white;
+   }
+}
+
+.first-span {
+    font-size: 3rem;
+    display: block;
+    text-transform: capitalize;
+    color: $grey;
+    opacity: .7;
+}
+
+.second-span::before {
+    content: "ANIMATION";
+    animation: text-changer 8s infinite 2s;
+}
+
+@keyframes text-changer {
+    0% {
+        content: "WEBSITES";
+        color: $color-primary;
+    }
+    25% {
+        content: "MOBILE APPS";
+        color: rgba(255,255,255,.7);
+    }
+    50% {
+        content: "SOFTWARES";
+        color: $color-secondary;
+    }
+    75% {
+        content: "WEB APPS";
+        color: rgba(255,255,255,.7);
+    }
+    100% {
+        content: "ICT SERVICES";
+        color: $color-primary;
+    }
+}
+
+
+
+/* Service Section */
+.service-section {
+    background-color: $light-grey;
+}
+
+.service {
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    row-gap: 3rem;
+    column-gap: 3rem;
+}
+
+.service-box {
+    text-align: center;
+    border: 1px solid transparent;
+    border-bottom: 3px solid $purple;
+    border-radius: 5px;
+    padding: 1.5rem;
+    background-color: $white;
+    cursor: pointer;
+    box-shadow: $box-shadow;
+    transform: translateY();
+    position: relative;
+    overflow: hidden;
+    transition: all .3s;
+}
+
+.service-box:hover {
+    border: 1px solid $color-text;
+    background-color: $grey;
+    transform: translateY(-2rem);
+    box-shadow: var(--box-shadow);
+}
+
+.service-box::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: $color-primary;
+    transform: translateX(-100%);
+    transform-origin: left;
+    transition: all .5s;
+
+}
+
+.service-box:hover::before {
+    transform: translateX(0);
+} 
+
+.service-box{
+    i{
+        font-size: 3rem;
+        color: $color-primary;
+        margin-bottom: 1rem;
+    }
+}
+
+.service-box:nth-child(even) i {
+    color: $color-secondary;
+}
+
+.t-head {
+    font-size: 2rem;
+    font-weight: 400;
+    color: $dark;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+
+.service-box {
+    p{
+        font-size: 1.4rem;
+    }   
+}
+
+
+
+
+/* TESTIMONIAL SECTION */
+/* TESTIMONIAL SECTION */
+/* TESTIMONIAL SECTION */
+.testimonial-section {
+    background-color: $light-grey;
+}
+
+.testimonial {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-box {
+    margin: 1rem;
+    background-color: $white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 2rem;
+    box-shadow: $box-shadow;
+    cursor: pointer;
+    transform: translateY(0);
+    transition: all .3s;
+}
+
+.testimonial-box:hover {
+    background-color: $light-grey;
+    transform: translateY(-1rem);
+}
+
+.testimonial-box {
+    i{
+        font-size: 3rem;
+        color: $grey;
+        margin-bottom: 1rem;
+        transition: all .3s;
+    }
+}
+
+.testimonial-box:hover{
+   i{
+    color: $purple;
+   }
+}
+
+.testimonial{
+   p{
+    font-size: 1.4rem;
+    margin: 1rem;
+   }
+
+}
+
+.testimonial-box{
+   img{
+    width: 30%;
+    border: 3px solid $grey;
+    border-radius: 50%;
+   }
+}
+
+.name {
+    color: $purple;
+    font-weight: 700;
+}
+
+
+/* CTA */
+.cta {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cta{
+    p{
+        font-size: 1.4rem;
+    }
+}

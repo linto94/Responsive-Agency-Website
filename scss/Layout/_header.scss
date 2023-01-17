@@ -1,0 +1,108 @@
+/* HEADER SECTION */
+/* HEADER SECTION */
+/* HEADER SECTION */
+header {
+    background-color: $grey;
+}
+
+.logo {
+     h2{
+        font-size: 3.5rem;
+        color: $color-secondary;
+        cursor: pointer;
+     }
+}
+
+.logo  {
+     h2{
+        span{
+            color: $color-primary;
+        }
+     }
+}
+
+.check,
+.hamburger {
+    display: none;
+}
+
+nav {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+.nav-ul {
+    @include flex();
+}
+
+.nav-ul {
+   li{
+    list-style: none;
+    margin: 0 .5rem;
+   }
+}
+
+.nav-ul{
+    li{
+        a{
+            font-size: 1.4rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: .8rem 1.6rem;
+            background-color: transparent;
+            color:$dark;
+            position: relative;
+            transition: all .3s;
+        }
+    }
+}
+
+.nav-ul li a:hover,
+.nav-ul .current a {
+    padding: .8rem;
+    background-color: $color-primary;
+    border-radius: 3px;
+    color: $white;
+}
+
+.nav-ul li a::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    bottom: 8px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid $color-primary;
+    border-width: 0 0 2px 2px;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.nav-ul li a:hover::before {
+    left: -8px;
+    bottom: -8px;
+    opacity: 1;
+} 
+
+.nav-ul li a::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid $color-primary;
+    border-width: 2px 2px 0 0;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.nav-ul li a:hover::after {
+    top: -8px;
+    right: -8px;
+    opacity: 1;
+}

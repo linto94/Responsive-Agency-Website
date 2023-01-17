@@ -1,0 +1,48 @@
+/* ABOUT SECTION */
+/* ABOUT SECTION */
+/* ABOUT SECTION */
+
+.title {
+    text-align: center;
+}
+
+.s-head {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    background: linear-gradient(to right,
+        $color-secondary,
+        $color-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+}
+
+.s-head::before {
+    content: "";
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    width: 3.5rem;
+    height: 2px;
+    background-color: $color-secondary;
+    transform: translateX(-50%);
+}
+
+.about {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-text {
+    width: 50%;
+}
+
+.about{
+    img{
+        width: 90%;
+    }
+}
